@@ -12,7 +12,7 @@ function Home() {
         <SearchBar></SearchBar>
         <FilterBtns></FilterBtns>
       </div>
-        <MovieCard />
+      <MovieCard></MovieCard>
     </div>
   );
 }
