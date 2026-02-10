@@ -1,4 +1,4 @@
-button {
+.button {
   background: white;
   font-family: inherit;
   padding: 0.6em 1.3em;
@@ -10,20 +10,26 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.button select {
+  margin-left: 20px;
+  border: 2px solid black;
+}
+
+.button:hover {
   transform: translate(-0.05em, -0.05em);
   box-shadow: 0.15em 0.15em;
 }
 
-button:active {
+.button:active {
   transform: translate(0.05em, 0.05em);
   box-shadow: 0.05em 0.05em;
 }
 
-.homeBtn-container {
+.filterBtn-container {
   margin-top: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: right;
   flex-direction: row;
   gap: 10px;
+  margin-right: 300px;
 }

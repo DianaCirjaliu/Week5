@@ -11,7 +11,10 @@ button {
   position: relative;
   overflow: hidden;
   z-index: 100;
-  transition: box-shadow 250ms, transform 250ms, filter 50ms;
+  transition:
+    box-shadow 250ms,
+    transform 250ms,
+    filter 50ms;
 }
 button:hover {
   transform: translate(2px, 2px);
@@ -41,7 +44,6 @@ button:hover::after {
   font-size: 2em;
   font-weight: 600;
   gap: 50px;
-  
 }
 .bgContainer span {
   position: relative;
@@ -58,7 +60,9 @@ button:hover::after {
   border-radius: 50%;
   position: relative;
   overflow: hidden;
-  transition: transform 250ms, background-color 250ms;
+  transition:
+    transform 250ms,
+    background-color 250ms;
   z-index: 100;
 }
 .arrowContainer::after {

@@ -1,5 +1,21 @@
-.container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.container-home {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-image: linear-gradient(
+    to top,
+    #201a1d,
+    #2a2429,
+    #332f35,
+    #3c3a41,
+    #45464e,
+    #4e525a,
+    #575e66,
+    #606a71,
+    #6c797f,
+    #7a888c,
+    #889899,
+    #97a7a6
+  );
+  height: 100vh;
 }

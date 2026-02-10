@@ -1,9 +1,11 @@
 import "./MainBtn.css";
+import { useNavigate } from "react-router-dom";
 
 function MainBtn() {
+  const navigate = useNavigate();
   return (
     <div>
-      <button class="button">
+      <button class="button" onClick={() => navigate("/home")}>
         <div class="bgContainer">
           <span>Watch</span>
           <span>Curious?</span>
