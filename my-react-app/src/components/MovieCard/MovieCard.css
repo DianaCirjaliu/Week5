@@ -32,23 +32,21 @@
   display: grid;
   flex-direction: column;
   max-width: 1200px;
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 30px; 
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
   padding-top: 50px;
 }
 
 .movie-card .rating {
-  width: 50px;
-  height: 30px;
-  border-radius: 30px;
-  background-color: white;
-  text-align: center;
+  display: inline-block;
+  padding: 2px 10px; 
+  border-radius: 20px; 
+  background-color: rgb(53, 52, 52);
+  line-height: 1;
 }
 
-img{
-  max-width: 100%;
-  max-height: 200px;
+img {
+  width: 100%;
+  max-height: 270px;
   border-radius: 17px;
-  margin-top: 0;
-  margin-bottom: 30px;
 }
