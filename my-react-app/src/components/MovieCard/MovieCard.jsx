@@ -2,10 +2,13 @@ import "./MovieCard.css";
 import Data from "../../assets/movies/movies.json";
 import FavBtn from "../../components/FavBtn/FavBtn";
 
-function MovieCard() {
+function MovieCard({searchTerm=""}) {
   return (
     <div className="container-movies">
-      {Data.map((movie) => {
+      {Data.filter((movie) => {
+        return movie.title.toLowerCase().includes(searchTerm.toLowerCase());
+      })
+      .map((movie) => {
         let color = "green";
         const rating = Number(movie.rating);
 
