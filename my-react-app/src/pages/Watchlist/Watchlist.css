@@ -1,4 +1,3 @@
-
 .container-watchlist {
   --color-0: #fff;
   --color-1: #111;
@@ -166,10 +165,9 @@
   background-position: center bottom;
 }
 
-.text-watch{
+.text-watch {
   color: white;
   font-size: 5ch;
   border-bottom: 2px solid white;
   margin-top: 30px;
 }
-
