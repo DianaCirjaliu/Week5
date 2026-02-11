@@ -1,4 +1,3 @@
-
 .star input {
   position: absolute;
   opacity: 0;
@@ -22,6 +21,8 @@
   width: 50px;
   transition: all 0.3s;
   fill: #666;
+  stroke-width: 0.5px;
+  stroke: black;
 }
 
 .star svg:hover {
