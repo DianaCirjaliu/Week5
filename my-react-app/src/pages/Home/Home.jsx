@@ -5,8 +5,10 @@ import MovieCard from "../../components/MovieCard/MovieCard";
 import "./Home.css";
 import { useEffect, useState } from "react";
 import Data from "../../assets/movies/movies.json";
+import Loading from "../../components/Loading/Loading";
 
 function Home() {
+  const [isLoading, setIsLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [selectedGenre, setSelectedGenre] = useState("All");
   const [selectedRating, setSelectedRating] = useState("All");
@@ -26,6 +28,16 @@ function Home() {
       return [...prev, movie];
     });
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <div className="container-home">
