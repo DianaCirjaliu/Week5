@@ -1,10 +1,10 @@
 import "./FavBtn.css";
 
-function FavBtn() {
+function FavBtn({ isFav, onToggle }) {
   return (
-    <div>
+    <div onChange={onToggle} style={{ cursor: "pointer" }}>
       <label className="star">
-        <input type="checkbox" />
+        <input type="checkbox" checked={isFav} readOnly />
         <svg
           height="24px"
           id="Layer_1"
@@ -14,6 +14,7 @@ function FavBtn() {
           xmlSpace="preserve"
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
+          style={{ fill: isFav ? "#ffeb49" : "#666", transition: "0.3s" }}
         >
           <g>
             <g>
