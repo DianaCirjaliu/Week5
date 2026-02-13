@@ -1,8 +1,7 @@
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
-    <div className="alert">
-      <h2>Oh no, something went wrong</h2>
-      <pre>{error.message}</pre>
+    <div>
+      <h2>Oh no, something went wrong: {error.message}</h2>
       <button onClick={resetErrorBoundary}>Try again</button>
     </div>
   );
