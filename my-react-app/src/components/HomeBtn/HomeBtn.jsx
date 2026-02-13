@@ -5,8 +5,12 @@ function HomeBtn() {
   const navigate = useNavigate();
   return (
     <div className="homeBtn-container">
-      <button onClick={() => navigate("/home")}>Home</button>
-      <button onClick={() => navigate("/watchlist")}>Watchlist</button>
+      <button className="home-btn" onClick={() => navigate("/home")}>
+        Home
+      </button>
+      <button className="watchlist-btn" onClick={() => navigate("/watchlist")}>
+        Watchlist
+      </button>
     </div>
   );
 }

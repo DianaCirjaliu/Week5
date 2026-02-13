@@ -4,7 +4,8 @@
   --color-2: #222;
   --color-3: #333;
   --color-4: #2e2e2e;
-  min-width: 100vw;
+  width: 100%;
+  overflow: hidden;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -166,8 +167,9 @@
 }
 
 .text-watch {
+  margin-top: 20px;
   color: white;
-  font-size: 5ch;
+  font-size: clamp(1rem, 8vw, 5vh);
+  font-weight: 600;
   border-bottom: 2px solid white;
-  margin-top: 30px;
 }

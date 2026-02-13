@@ -1,22 +1,18 @@
-.container-home .header {
-  display: flex;
-  flex-direction: column;
-  margin-top: 0;
-  margin-bottom: auto;
-}
-
 .container-home {
   --color-0: #fff;
   --color-1: #111;
   --color-2: #222;
   --color-3: #333;
   --color-4: #2e2e2e;
-  min-width: 100vw;
+  width: 100%;
   min-height: 100vh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-right: 10%;
+  padding-left: 10%;
 
   background-color: var(--color-1);
   background-image:

@@ -41,14 +41,12 @@ function Home() {
 
   return (
     <div className="container-home">
-      <div className="header">
-        <HomeBtn />
-        <SearchBar onSearch={setSearch} />
-        <FilterBtns
-          onGenreChange={setSelectedGenre}
-          onRatingChange={setSelectedRating}
-        />
-      </div>
+      <HomeBtn />
+      <SearchBar onSearch={setSearch} />
+      <FilterBtns
+        onGenreChange={setSelectedGenre}
+        onRatingChange={setSelectedRating}
+      />
       <MovieCard
         movies={Data}
         searchTerm={search}
