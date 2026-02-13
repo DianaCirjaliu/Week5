@@ -1,5 +1,7 @@
 import "./MovieCard.css";
 import FavBtn from "../../components/FavBtn/FavBtn";
+import ErrorFallback from "../ErrorFallback/ErorrFallback";
+import { ErrorBoundary } from "react-error-boundary";
 
 function MovieCard({
   movies = [],
@@ -40,18 +42,20 @@ function MovieCard({
             color = "yellow";
           }
           return (
-            <article key={movie.id} className="movie-card">
-              <img src={`/images/${movie.image}`} alt={movie.title} />
-              <h2>{movie.title}</h2>
-              <h3>Genre: {movie.genre}</h3>
-              <h3>
-                Rating:{" "}
-                <span className="rating" style={{ color }}>
-                  {movie.rating}
-                </span>
-              </h3>
-              <FavBtn isFav={isFav} onToggle={() => onFavToggle(movie)} />
-            </article>
+            <ErrorBoundary key={movie.id} FallbackComponent={ErrorFallback}>
+              <article className="movie-card">
+                <img src={`/images/${movie.image}`} alt={movie.title} />
+                <h2>{movie.title}</h2>
+                <h3>Genre: {movie.genre}</h3>
+                <h3>
+                  Rating:{" "}
+                  <span className="rating" style={{ color }}>
+                    {movie.rating}
+                  </span>
+                </h3>
+                <FavBtn isFav={isFav} onToggle={() => onFavToggle(movie)} />
+              </article>
+            </ErrorBoundary>
           );
         })}
     </div>
