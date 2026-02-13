@@ -7,8 +7,8 @@ function MainBtn() {
     <div>
       <button class="button" onClick={() => navigate("/home")}>
         <div class="bgContainer">
-          <span>Watch</span>
           <span>Curious?</span>
+          <span>Watch </span>
         </div>
         <div class="arrowContainer">
           <svg

@@ -40,19 +40,41 @@ button:hover::after {
   justify-content: start;
   align-items: center;
   overflow: hidden;
-  max-width: 40%;
-  font-size: 2em;
-  font-weight: 600;
-  gap: 50px;
+  height: 1.5em;
+  min-width: 120px;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  gap: 15px;
 }
 .bgContainer span {
   position: relative;
   transform: translateX(-100%);
   transition: all 250ms;
+  left: 0;
+  white-space: nowrap;
 }
-.button:hover .bgContainer > span {
+
+.bgContainer span:nth-child(1) {
+  position: relative;
   transform: translateX(0);
+  opacity: 1;
 }
+
+.bgContainer span:nth-child(2) {
+  position: absolute;
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+button:hover .bgContainer span:nth-child(1) {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+button:hover .bgContainer span:nth-child(2) {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 .arrowContainer {
   padding: 1em;
   margin-inline-end: 1em;

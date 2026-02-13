@@ -9,8 +9,9 @@
   --color-7: #871a1a;
   --color-8: #ff6347;
   --color-9: #ff3814;
-  min-width: 100vw;
+  width: 100%;
   min-height: 100vh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -448,14 +449,15 @@
 
 .title {
   color: white;
-  font-size: 10vh;
-  font-weight: 600vh;
+  font-size: clamp(2rem, 8vw, 10vh);
+  font-weight: 600;
   border-bottom: 2px solid white;
 }
 
 .text {
   color: rgb(158, 154, 154);
-  font-size: 2vh;
-  font-weight: 300vh;
+  font-size: 1.1rem;
+  font-weight: 300;
   padding-bottom: 10px;
+  text-align: center;
 }
