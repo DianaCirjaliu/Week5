@@ -15,8 +15,16 @@ button {
   flex: 1;
 }
 
+.home-btn .active {
+  color: rgb(204, 27, 56);
+}
+
 .watchlist-btn {
   flex: 1;
+}
+
+.watchlist-btn .active {
+  color: rgb(204, 27, 56);
 }
 
 button:hover {
