@@ -1,0 +1,9 @@
+.header {
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background-color: rgb(25, 24, 24);
+  padding: 20px;
+}

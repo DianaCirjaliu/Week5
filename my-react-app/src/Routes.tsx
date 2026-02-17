@@ -7,6 +7,7 @@ import ErrorFallback from "./components/ErrorFallback/ErorrFallback";
 import MovieDetails from "./components/MovieDetails/MovieDetails";
 import moviesData from "../src/assets/movies/movies.json";
 import FilteredMovies from "./components/FilteredMovies/FilteresMovies";
+import MainLayout from "./components/MainLayout/MainLayout";
 
 function AppRoutes() {
   return (
@@ -19,8 +20,6 @@ function AppRoutes() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<IndexPage />} />
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/watchlist" element={<Watchlist />} />
           <Route path="*" element={<div>Page not found (404)</div>} />
 
           {/*individual page for a movie */}
@@ -34,6 +33,11 @@ function AppRoutes() {
             path="/movies"
             element={<FilteredMovies movies={moviesData} />}
           />
+
+          <Route element={<MainLayout />}>
+            <Route path="/home" element={<HomePage />} />
+            <Route path="/watchlist" element={<Watchlist />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </ErrorBoundary>

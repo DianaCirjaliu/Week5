@@ -1,5 +1,4 @@
 import "./Watchlist.css";
-import HomeBtn from "../../components/HomeBtn/HomeBtn";
 import MovieCard from "../../components/MovieCard/MovieCard";
 import { useState, useEffect } from "react";
 
@@ -19,7 +18,6 @@ function Watchlist() {
 
   return (
     <div className="container-watchlist">
-      <HomeBtn />
       <h1 className="text-watch">My Watchlist</h1>
       {watchlist.length > 0 ? (
         <MovieCard
