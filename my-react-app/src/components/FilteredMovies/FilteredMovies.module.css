@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background-color: black;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  height: 100%;
+}
+
+.card {
+  height: fit-content;
+  border: 2px solid white;
+  border-radius: 20px;
+}
