@@ -1,4 +1,3 @@
-import HomeBtn from "../../components/HomeBtn/HomeBtn";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import FilterBtns from "../../components/FilterBtns/FilterBtns";
 import MovieCard from "../../components/MovieCard/MovieCard";
@@ -41,7 +40,6 @@ function Home() {
 
   return (
     <div className="container-home">
-      <HomeBtn />
       <SearchBar onSearch={setSearch} />
       <FilterBtns
         onGenreChange={setSelectedGenre}
