@@ -9,7 +9,12 @@ function MovieDetails({ movies }) {
   const movie = movies.find((m) => m.id === parseInt(id));
 
   if (!movie) {
-    return <div>The movie was not found</div>;
+    return (
+      <div>
+        The movie was not found{" "}
+        <button onClick={() => navigate(-1)}>Go back</button>
+      </div>
+    );
   }
 
   return (
@@ -24,7 +29,7 @@ function MovieDetails({ movies }) {
           <strong>Rating:</strong> {movie.rating}
         </p>
       </div>
-      <button onClick={() => navigate(-1)}>← Înapoi</button>
+      <button onClick={() => navigate(-1)}>Go back</button>
     </div>
   );
 }

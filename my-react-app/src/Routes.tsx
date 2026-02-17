@@ -6,6 +6,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "./components/ErrorFallback/ErorrFallback";
 import MovieDetails from "./components/MovieDetails/MovieDetails";
 import moviesData from "../src/assets/movies/movies.json";
+import FilteredMovies from "./components/FilteredMovies/FilteresMovies";
 
 function AppRoutes() {
   return (
@@ -26,6 +27,12 @@ function AppRoutes() {
           <Route
             path="/movies/:id"
             element={<MovieDetails movies={moviesData} />}
+          />
+
+          {/*filtered movie list */}
+          <Route
+            path="/movies"
+            element={<FilteredMovies movies={moviesData} />}
           />
         </Routes>
       </BrowserRouter>
